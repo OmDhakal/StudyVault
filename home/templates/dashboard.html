@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block dashboard_content %}
+<div class="dashboard-layout">
+    <aside class="dashboard-sidebar">
+        <div class="dashboard-brand">
+            <span class="dashboard-brand-mark">S</span>
+            <div>
+                <strong>StudyVault</strong>
+                <small>Student workspace</small>
+            </div>
+        </div>
+
+        <div class="dashboard-sidebar-heading">Workspace</div>
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+            <a class="dashboard-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">
+                <span>⌂</span> Home
+            </a>
+            <a class="dashboard-link {% if request.resolver_match.url_name == 'resources' %}active{% endif %}" href="{% url 'resources' %}">
+                <span>▣</span> Resources
+            </a>
+            <a class="dashboard-link {% if request.resolver_match.url_name == 'library' %}active{% endif %}" href="{% url 'library' %}">
+                <span>▤</span> My Library
+            </a>
+            <a class="dashboard-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}" href="{% url 'profile' %}">
+                <span>◉</span> Profile
+            </a>
+        </nav>
+
+        <div class="dashboard-sidebar-footer">
+            <div class="dashboard-user">
+                <div class="dashboard-user-avatar">{{ user.username|first|upper }}</div>
+                <div class="text-truncate">
+                    <strong>{{ user.username }}</strong>
+                    <small>Student account</small>
+                </div>
+            </div>
+            <a class="dashboard-link logout-link" href="{% url 'logout' %}"><span>↪</span> Logout</a>
+        </div>
+    </aside>
+
+    <main class="page-shell dashboard-content">
+        <div class="dashboard-topbar">
+            <div>
+                <span class="dashboard-eyebrow">Student workspace</span>
+                <h1>{% if request.resolver_match.url_name == 'home' %}Good to see you, {{ user.username }}{% else %}{{ request.resolver_match.url_name|title }}{% endif %}</h1>
+            </div>
+            <a class="btn btn-primary dashboard-action" href="{% url 'resources' %}">Explore resources <span>→</span></a>
+        </div>
+        {% block content %}{% endblock %}
+    </main>
+</div>
+{% endblock %}

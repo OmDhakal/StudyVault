@@ -1,0 +1,89 @@
+{% extends 'dashboard.html' %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="row align-items-center g-4">
+        <div class="col-lg-6 hero-copy">
+            <h1>Your Academic Resources, All in One Place</h1>
+            <p>
+                StudyVault is a student-driven platform where you can discover, share, and access academic resources.
+                Find notes, past papers, slides and more — all organized by university, program, semester and subject.
+                Learn smarter, together.
+            </p>
+
+            <div class="feature-pills">
+                <div class="feature-pill"><span class="icon">📚</span> Share Resources</div>
+                <div class="feature-pill"><span class="icon">👥</span> Build Community</div>
+                <div class="feature-pill"><span class="icon">✨</span> Improve Grades</div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="mockup-panel">
+                <div class="mockup-header">
+                    <div class="window-dots"><span></span><span></span><span></span></div>
+                    <div>StudyVault</div>
+                    <div>Search</div>
+                </div>
+
+                <div class="mockup-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="sidebar-menu">
+                                <div class="menu-item active"><span class="menu-dot"></span> Home</div>
+                                <div class="menu-item"><span class="menu-dot"></span> Resources</div>
+                                <div class="menu-item"><span class="menu-dot"></span> My Library</div>
+                                <div class="menu-item"><span class="menu-dot"></span> Bookmarks</div>
+                                <div class="menu-item"><span class="menu-dot"></span> Messages</div>
+                                <div class="menu-item"><span class="menu-dot"></span> Profile</div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="content-panel">
+                                <div class="search-box">Find the right resources for your academic journey</div>
+                                <div class="stats-row">
+                                    <div class="stat-box">
+                                        <span class="text-muted small">Total Resources</span>
+                                        <strong>10,428</strong>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="text-muted small">Active Users</span>
+                                        <strong>2,341</strong>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="text-muted small">Success Rate</span>
+                                        <strong>94.8%</strong>
+                                    </div>
+                                </div>
+
+                                <div class="cards-grid">
+                                    <div class="resource-card">
+                                        <div class="resource-badge">PDF</div>
+                                        <h6>DBMS Notes</h6>
+                                        <div class="meta">Semester 3 · 4.8/5</div>
+                                    </div>
+                                    <div class="resource-card">
+                                        <div class="resource-badge">PDF</div>
+                                        <h6>System Analysis</h6>
+                                        <div class="meta">Semester 3 · 4.7/5</div>
+                                    </div>
+                                    <div class="resource-card">
+                                        <div class="resource-badge">DOC</div>
+                                        <h6>Web Tech</h6>
+                                        <div class="meta">Semester 4 · 4.9/5</div>
+                                    </div>
+                                    <div class="resource-card">
+                                        <div class="resource-badge">XLS</div>
+                                        <h6>Past Papers</h6>
+                                        <div class="meta">Semester 5 · 4.6/5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

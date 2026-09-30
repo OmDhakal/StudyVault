@@ -1,0 +1,49 @@
+{% extends 'dashboard.html' %}
+
+{% block content %}
+<section class="page-card">
+    <div class="section-header">
+        <h2>Popular Resources</h2>
+        <button class="btn btn-primary">View all</button>
+    </div>
+
+    <div class="resource-layout">
+        <aside class="side-panel">
+            <div class="list-group">
+                <div class="list-group-item active">Resources</div>
+                <div class="list-group-item">My Library</div>
+                <div class="list-group-item">Bookmarks</div>
+                <div class="list-group-item">Course Notes</div>
+                <div class="list-group-item">Past Papers</div>
+                <div class="list-group-item">Slides</div>
+            </div>
+        </aside>
+
+        <div>
+            <div class="search-box mb-3">Search by title, subject, or university...</div>
+            <div class="cards-grid">
+                <div class="resource-card">
+                    <div class="resource-badge">DBMS</div>
+                    <h6>DBMS Unit 1 Notes</h6>
+                    <div class="meta">Semester 3 · 220 downloads</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-badge">POF</div>
+                    <h6>System Analysis PDF</h6>
+                    <div class="meta">Semester 3 · 182 downloads</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-badge">PPT</div>
+                    <h6>Web Tech Slides</h6>
+                    <div class="meta">Semester 4 · 110 downloads</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-badge">QZ</div>
+                    <h6>Exam Questions</h6>
+                    <div class="meta">Semester 2 · 90 downloads</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
